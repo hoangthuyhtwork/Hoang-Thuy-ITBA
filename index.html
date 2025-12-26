@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoang Thi Thuy - Business Analyst Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #4a5f7a;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            border-radius: 0;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-in;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .sidebar {
+            background: #4a5f7a;
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .sidebar h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .sidebar .job-role {
+            font-size: 1em;
+            margin-bottom: 30px;
+            color: #d0d8e0;
+            font-weight: 300;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .sidebar-section:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-title {
+            font-size: 0.9em;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #d0d8e0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.85em;
+            line-height: 1.5;
+        }
+
+        .contact-item i {
+            margin-top: 2px;
+            min-width: 20px;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding: 40px;
+            background: white;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            color: #4a5f7a;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4a5f7a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .job {
+            margin-bottom: 25px;
+            padding: 0;
+            background: transparent;
+            border-radius: 0;
+            border-left: none;
+            transition: all 0.3s ease;
+        }
+
+        .job:hover {
+            box-shadow: none;
+            transform: none;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .job-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .job-period {
+            color: #666;
+            font-weight: 400;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+            font-size: 0.85em;
+            font-style: italic;
+        }
+
+        .company {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .responsibilities {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .responsibilities li {
+            padding-left: 25px;
+            margin-bottom: 8px;
+            position: relative;
+            color: #444;
+        }
+
+        .responsibilities li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #4a5f7a;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .skills-list li {
+            padding-left: 20px;
+            margin-bottom: 8px;
+            position: relative;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        .skills-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #d0d8e0;
+        }
+
+        .summary-text {
+            font-size: 0.9em;
+            line-height: 1.7;
+            color: #444;
+            text-align: justify;
+        }
+
+        .education-content {
+            font-size: 0.9em;
+            line-height: 1.7;
+        }
+
+        .education-degree {
+            font-weight: 600;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .education-school {
+            color: #d0d8e0;
+            font-size: 0.85em;
+        }
+
+        .education-year {
+            color: #d0d8e0;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+
+        .activities-list {
+            font-size: 0.9em;
+            color: white;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                padding: 30px 20px;
+            }
+            
+            .main-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar - Left Column -->
+        <div class="sidebar">
+            <h1>HOANG THI<br>THUY</h1>
+            <div class="job-role">Business Analyst</div>
+
+            <!-- Details Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">DETAILS</div>
+                <div class="contact-item">
+                    <i>📧</i>
+                    <a href="mailto:hoangthuyht.work@gmail.com">hoangthuyht.work@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i>📞</i>
+                    <span>(84) 962 934 170</span>
+                </div>
+                <div class="contact-item">
+                    <i>📍</i>
+                    <span>Street 3/2, Ward 14, District 10, HCM City</span>
+                </div>
+                <div class="contact-item">
+                    <i>💼</i>
+                    <a href="https://www.linkedin.com/in/hoàng-thúy">LinkedIn Profile</a>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">SKILLS</div>
+                <ul class="skills-list">
+                    <li>Requirements Engineering (BRD, SRS, User Stories)</li>
+                    <li>Process Modeling (UML, BPMN)</li>
+                    <li>Database Design (ERD)</li>
+                    <li>SQL & Data Analysis</li>
+                    <li>API Testing (Postman, Swagger)</li>
+                    <li>Test Case & UAT</li>
+                    <li>UI/UX Design (Figma)</li>
+                    <li>Stakeholder Management</li>
+                    <li>Agile & Scrum</li>
+                    <li>ERP Systems (Odoo HRM/CRM)</li>
+                </ul>
+            </div>
+
+            <!-- Education Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">EDUCATION</div>
+                <div class="education-content">
+                    <div class="education-year">2012 — 2016</div>
+                    <div class="education-degree">Bachelor of International Business</div>
+                    <div class="education-school">The College of Finance and Customs</div>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">CERTIFICATIONS</div>
+                <div class="education-content">
+                    <div class="education-year">2025</div>
+                    <div class="education-degree">IT Business Analysis (ITBA)</div>
+                    <div class="education-school">MindX School</div>
+                </div>
+            </div>
+
+            <!-- Technical Tools Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">TECHNICAL TOOLS</div>
+                <div class="activities-list">
+                    • MySQL & PostgreSQL<br>
+                    • Postman & Swagger<br>
+                    • Jira & Confluence<br>
+                    • Figma & Draw.io<br>
+                    • UML Tools (PlantUML, Lucidchart)<br>
+                    • Looker Studio<br>
+                    • Excel (Advanced)<br>
+                    • Microsoft Office Suite
+                </div>
+            </div>
+
+            <!-- Activities Section -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">INTERESTS</div>
+                <div class="activities-list">
+                    • Reading & Learning<br>
+                    • Environmental Conservation<br>
+                    • Travel & Culture
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content - Right Column -->
+        <div class="main-content">
+            <!-- Summary Section -->
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary-text">
+                    Results-driven Business Analyst with 5 years of specialized experience in Business Analysis for HRM and CRM systems, backed by 10 years of total professional experience in HR operations and systems management. Expert in requirements documentation (BRD, SRS/FS, User Stories), database design (ERD), and business process design using UML and BPMN for enterprise management systems. Proficient in SQL, API documentation and testing (Postman, Swagger), test case design, Figma, Draw.io, and UML tools with a proactive approach to leveraging AI for workflow optimization. Demonstrated success in solution consulting and stakeholder expectation management across diverse projects.
+                </p>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="job">
+                    <div class="job-period">May 2024 — Present</div>
+                    <div class="job-title">Business Analyst</div>
+                    <div class="company">Blue Ocean Technology Joint Stock Company</div>
+                    <ul class="responsibilities">
+                        <li>Lead business analysis initiatives for HRM, CRM, and Student Admission Management systems, ensuring alignment with organizational objectives</li>
+                        <li>Create comprehensive requirements documentation including BRD, SRS/FS, and User Stories for complex enterprise solutions</li>
+                        <li>Design database structures and Entity-Relationship Diagrams (ERD) to support system architecture</li>
+                        <li>Design and document business process flows using UML and BPMN methodologies to optimize system workflows</li>
+                        <li>Develop and execute comprehensive test cases for system validation and quality assurance</li>
+                        <li>Document and test RESTful APIs using Postman and Swagger for system integrations</li>
+                        <li>Utilize SQL for complex data analysis, validation, and reporting to support business decision-making</li>
+                        <li>Create wireframes and prototypes using Figma to visualize system designs and user interfaces</li>
+                        <li>Collaborate with cross-functional teams to translate business requirements into technical specifications</li>
+                        <li>Facilitate stakeholder workshops and manage expectations throughout the project lifecycle</li>
+                        <li>Implement AI-powered tools to enhance productivity and streamline analysis processes</li>
+                        <li>Provide solution consulting and recommendations based on industry best practices</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-period">May 2023 — Apr 2024</div>
+                    <div class="job-title">Business Analyst</div>
+                    <div class="company">EQuest Education Joint Stock Company</div>
+                    <ul class="responsibilities">
+                        <li>Specialized in Odoo HRM system implementation and customization for educational institutions</li>
+                        <li>Conducted comprehensive requirements gathering sessions with stakeholders to identify business needs and pain points</li>
+                        <li>Developed detailed functional specifications and user stories to guide development teams</li>
+                        <li>Designed Entity-Relationship Diagrams (ERD) for database optimization and system integration</li>
+                        <li>Created and executed test cases for system validation and User Acceptance Testing (UAT)</li>
+                        <li>Documented and tested API endpoints using Postman and Swagger for third-party integrations</li>
+                        <li>Designed process flows and system diagrams using UML and BPMN standards</li>
+                        <li>Performed gap analysis between current state and desired future state of HRM processes</li>
+                        <li>Utilized SQL queries for data migration validation, analysis, and system integration testing</li>
+                        <li>Provided training and documentation to end-users on new system features and workflows</li>
+                        <li>Collaborated with technical teams to ensure feasibility of proposed solutions</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-period">2021 — Apr 2023</div>
+                    <div class="job-title">Compensation and Benefits Supervisor</div>
+                    <div class="company">Express Delivery Services Corporation</div>
+                    <ul class="responsibilities">
+                        <li>Managed HRIS and HR systems (Timesheet, Workday, Odoo HR) for more than 20,000 employees</li>
+                        <li>Provided business analysis support for building automated salary calculation systems and HRMS enhancements</li>
+                        <li>Analyzed and documented payroll processes, identifying opportunities for system optimization</li>
+                        <li>Prepared detailed analytical reports on salary expenses and HR metrics for senior management</li>
+                        <li>Developed and implemented compensation policies based on data-driven insights</li>
+                        <li>Led C&B team of 4 personnel, providing guidance on process improvements and system utilization</li>
+                        <li>Coordinated with IT teams on system requirements and enhancement specifications</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-period">Oct 2018 — Dec 2020</div>
+                    <div class="job-title">Compensation and Benefits Specialist</div>
+                    <div class="company">Scommerce Investment Corporation</div>
+                    <ul class="responsibilities">
+                        <li>Verified and maintained data integrity in Odoo HRMS for over 7,000 employees</li>
+                        <li>Performed requirements analysis for payroll system enhancements and policy implementations</li>
+                        <li>Created detailed process documentation for salary calculation and benefits administration</li>
+                        <li>Collaborated with stakeholders to develop and refine compensation policies</li>
+                        <li>Generated analytical reports on payroll, tax, and insurance metrics</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-period">Jun 2016 — Sep 2018</div>
+                    <div class="job-title">Business Analyst</div>
+                    <div class="company">Mekong Resources</div>
+                    <div style="margin: 10px 0; font-weight: 600; color: #555;">Key Projects:</div>
+                    <div style="margin-bottom: 15px;">
+                        <strong>HRIS Implementation for Express Delivery Services Corporation:</strong>
+                        <ul class="responsibilities">
+                            <li>Led requirements gathering for Employee, Timesheet, Recruitment, Contract, Payroll, and Holidays modules</li>
+                            <li>Facilitated stakeholder meetings and produced comprehensive business requirements documentation</li>
+                            <li>Evaluated existing business processes and performed requirements analysis</li>
+                            <li>Developed optimization strategies and process improvement recommendations</li>
+                            <li>Created test cases and managed UAT activities for Odoo Apps implementation</li>
+                            <li>Coordinated software deployment and provided user training</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>Medic Finger Vein ID Project for MEDIC MEDICAL CENTER:</strong>
+                        <ul class="responsibilities">
+                            <li>Gathered and analyzed requirements from various stakeholders</li>
+                            <li>Produced functional specifications and user documentation</li>
+                            <li>Developed comprehensive test cases and validated system functionality</li>
+                            <li>Managed deployment activities and end-user training sessions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll animation for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'slideIn 0.6s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Print functionality
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
